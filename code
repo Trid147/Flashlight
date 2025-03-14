@@ -5,8 +5,8 @@ local player = Players.LocalPlayer
 local Click_sound = "rbxassetid://9070807695"
 
 local Flashlight = Instance.new("PointLight")
-Flashlight.Brightness = 10
-Flashlight.Range = 20
+Flashlight.Brightness = 7
+Flashlight.Range = 30
 Flashlight.Color = Color3.new(0.882353, 0.901961, 0.117647)
 Flashlight.Parent = player.Character.Head
 Flashlight.Enabled = true
