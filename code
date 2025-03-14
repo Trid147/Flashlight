@@ -1,0 +1,42 @@
+local Players = game:GetService("Players")
+local UIS: UserInputService = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+
+local Click_sound = "rbxassetid://9070807695"
+
+local Flashlight = Instance.new("PointLight")
+Flashlight.Brightness = 10
+Flashlight.Range = 20
+Flashlight.Color = Color3.new(0.882353, 0.901961, 0.117647)
+Flashlight.Parent = player.Character.Head
+Flashlight.Enabled = true
+
+print("Flashlight in activated")
+
+local function PlayClick()
+	local sound = Instance.new("Sound")
+	sound.SoundId = Click_sound
+	sound.Parent = game.Players.LocalPlayer
+	sound.Volume = 25
+	sound:Play()
+	wait(2)
+	sound:Destroy()
+end
+
+UIS.InputBegan:Connect(function(input: InputObject, isTyping)  
+	if input.KeyCode == Enum.KeyCode.Q then
+		if not Flashlight.Enabled then
+			Flashlight.Enabled = true
+			PlayClick()
+		else
+			Flashlight.Enabled = false
+			PlayClick()
+		end
+	end
+end)
+
+--[[spawn(function()  
+	while wait(0.1) do
+		
+	end
+end)]]
