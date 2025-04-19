@@ -10,9 +10,9 @@ print("Flashlight in activated")
 local function SpawnLight()
 	local Flashlight = Instance.new("PointLight")
 	Flashlight.Name = "Flashlight"
-	Flashlight.Brightness = 7
-	Flashlight.Range = 30
-	Flashlight.Color = Color3.new(0.784314, 0.784314, 0.196078)
+	Flashlight.Brightness = 5
+	Flashlight.Range = 35
+	Flashlight.Color = Color3.new(0.784314, 0.784314, 0.496078)
 	Flashlight.Parent = player.Character.Head
 	Flashlight.Enabled = true
 end
